@@ -7,7 +7,7 @@ Basic and simple string library for template
 
 # Quick Start
 
-### Copy this to top in your file:
+### Copy this in top in your file:
 
 ```c
 #include "astring/astring.h"
