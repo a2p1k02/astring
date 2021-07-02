@@ -1,5 +1,5 @@
 # astring
-## my variable string for C language.
+### Simple string from C.
 
 Create this string for basic functional.
 
