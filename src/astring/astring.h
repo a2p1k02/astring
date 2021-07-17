@@ -1,8 +1,6 @@
 #ifndef ASTRING_H
 #define ASTRING_H
 
-#include <stdlib.h>
-
 typedef struct astring {
     char* data;
     size_t length;
