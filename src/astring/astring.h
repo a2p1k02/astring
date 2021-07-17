@@ -6,9 +6,10 @@ typedef struct astring {
     size_t length;
 }astr;
 
-void astr_create(astr* str, const char* data);
-void astr_free(astr* str);
-size_t astr_len(astr* str);
-void astr_cat(astr* str1, astr* str2);
+void astrcreate(astr* str, const char* data);
+void astrfree(astr* str);
+size_t astrlen(astr* str);
+void astrcat(astr* str1, astr* str2);
+void astrncat(astr* str1, astr* str2, size_t length);
 
 #endif //ASTRING_H

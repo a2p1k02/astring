@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "astring.h"
 
-void astr_create(astr* str, const char* data) 
+void astrcreate(astr* str, const char* data)
 {
-    astr_free(str);
+    astrfree(str);
     str->data = malloc(sizeof (char) * str->length);
     if (str->data == NULL)
         return;
@@ -13,20 +13,27 @@ void astr_create(astr* str, const char* data)
     strncat(str->data, data, str->length);
 }
 
-void astr_free(astr* str) 
+void astrfree(astr* str)
 {
     str->data = NULL;
     str->length = 0;
 }
 
-size_t astr_len(astr* str) 
+size_t astrlen(astr* str)
 {
     return str->length;
 }
 
-void astr_cat(astr* str1, astr* str2) 
+void astrcat(astr* str1, astr* str2)
 {
     if (str1->data == NULL && str2->data == NULL)
         return;
     strncat(str1->data, str2->data, str1->length + str2->length);
+}
+
+void astrncat(astr* str1, astr* str2, size_t length)
+{
+    if (str1->data == NULL && str2->data == NULL)
+        return;
+    strncat(str1->data, str2->data, length);
 }
