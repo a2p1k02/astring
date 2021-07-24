@@ -37,3 +37,9 @@ void astrncat(astr* str1, astr* str2, size_t length)
         return;
     strncat(str1->data, str2->data, length);
 }
+
+void astrmult(astr* str, const int number)
+{
+    for (int i = 1; i < number; i++)
+        strncat(str->data, str->data, str->length * number);
+}
