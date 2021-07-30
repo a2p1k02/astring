@@ -4,30 +4,27 @@
 
 main()
 {
-    astr str1;
-    astrcreate(&str1, "Hello, ");
+    astr str1 = astrcreate("Hello, ");
 
-    astr str2;
-    astrcreate(&str2, "World!");
+    astr str2 = astrcreate("World!");
 
     astrcat(&str1, &str2);
 
     printf("%s\n", str1.data);
 
-    astrcreate(&str1, "Hello, ");
-    astrcreate(&str2, "World");
+    str1 = astrcreate("Hello, ");
+    str2 = astrcreate("World");
 
     astrcat(&str1, &str2);
     printf("%s\n", str1.data);
 
-    astrcreate(&str1, "Hola, ");
-    astrcreate(&str2, "User!");
+    str1 = astrcreate("Hola, ");
+    str2 = astrcreate("User!");
 
     astrncat(&str1, &str2, str1.length + str2.length);
     printf("%s\n", str1.data);
     
-    astr str3;
-    astrcreate(&str3, "test");
+    astr str3 =  astrcreate("test");
     astrmult(&str3, 2);
     printf("%s\n", str3.data);
 

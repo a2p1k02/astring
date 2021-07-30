@@ -2,15 +2,16 @@
 #include <stdlib.h>
 #include "astring.h"
 
-void astrcreate(astr* str, const char* data)
+astr astrcreate(const char* data)
 {
-    astrfree(str);
-    str->data = malloc(sizeof (char) * str->length);
-    if (str->data == NULL)
-        return;
-    str->length = strlen(data);
-    str->data = realloc(str->data, str->length);
-    strncat(str->data, data, str->length);
+    astr str;
+    astrfree(&str);
+    str.data = malloc(sizeof (char) * str.length);
+    str.length = strlen(data);
+    str.data = realloc(str.data, str.length);
+    strncat(str.data, data, str.length);
+
+    return str;
 }
 
 void astrfree(astr* str)
