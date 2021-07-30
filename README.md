@@ -22,11 +22,9 @@ C styled string is rule!
 
 ### String create: 
 ```c
-astr str1;
-astrcreate(&str1, "Hello, ");
+astr str1 = astrcreate("Hello, ");
 
-astr str2;
-astrcreate(&str2, "World!");
+astr str2 = astrcreate("World!");
 ```
 
 ### String concatenate:
@@ -42,8 +40,7 @@ astrncat(&str1, &str2, str1.length + str2.length);
 
 ### String multiply:
 ```c
-astr str3;
-astrcreate(&str3, "test");
+astr str3 = astrcreate("test");
 astrmult(&str3, 2);
 printf("%s\n", str3.data); /*Output: testtest*/
 
