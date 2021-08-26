@@ -1,0 +1,3 @@
+[submodule "external/chkd"]
+	path = external/chkd
+	url = https://github.com/a2p1k02/chkd
